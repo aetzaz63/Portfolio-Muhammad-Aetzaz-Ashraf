@@ -19,22 +19,22 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
+    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-black">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
             Experience
           </h2>
-          <div className="w-20 h-1 bg-white mx-auto"></div>
+          <div className="w-20 h-1 bg-orange-600 mx-auto"></div>
         </div>
 
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <Card key={index} className="hover:shadow-xl transition-shadow border border-slate-700 bg-slate-800">
+            <Card key={index} className="hover:shadow-xl transition-all hover:border-orange-600 border border-slate-700 bg-slate-900 dark:bg-slate-900">
               <CardContent className="p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-700 rounded-lg">
+                    <div className="p-3 bg-orange-600 rounded-lg">
                       <Briefcase className="text-white" size={24} />
                     </div>
                     <div>
@@ -58,9 +58,9 @@ export function Experience() {
                   {exp.description.map((item, i) => (
                     <li
                       key={i}
-                      className="text-slate-400 flex items-start gap-2"
+                      className="text-slate-300 flex items-start gap-2"
                     >
-                      <span className="text-white mt-1.5">•</span>
+                      <span className="text-orange-600 mt-1.5">•</span>
                       <span>{item}</span>
                     </li>
                   ))}

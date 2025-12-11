@@ -99,13 +99,16 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-slate-950">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
             Projects
           </h2>
-          <div className="w-20 h-1 bg-white mx-auto"></div>
+          <div className="w-20 h-1 bg-orange-600 mx-auto"></div>
+          <p className="text-slate-300 mt-6 max-w-3xl mx-auto text-lg">
+            A showcase of my work across web development, n8n automation, and software engineering.
+          </p>
         </div>
 
         <div className="mb-8 flex flex-wrap justify-center gap-2">
@@ -116,9 +119,9 @@ export function Projects() {
               variant={activeTab === tab ? 'default' : 'outline'}
               className={`${
                 activeTab === tab
-                  ? 'bg-white text-black hover:bg-slate-200'
-                  : 'border-white text-white hover:bg-slate-800'
-              }`}
+                  ? 'bg-orange-600 text-white hover:bg-orange-700'
+                  : 'border-slate-600 text-slate-300 hover:bg-slate-800'
+              } transition-all duration-300`}
             >
               {tab}
             </Button>
@@ -129,7 +132,7 @@ export function Projects() {
           {getDisplayProjects().map((project, index) => (
             <Card
               key={index}
-              className="hover:shadow-xl transition-all hover:-translate-y-1 duration-300 overflow-hidden border border-slate-700 bg-slate-800"
+              className="hover:shadow-xl transition-all hover:-translate-y-1 duration-300 overflow-hidden border border-slate-700 bg-slate-900 dark:bg-slate-900 hover:border-orange-600"
             >
               {project.image && (
                 <div className="relative aspect-video overflow-hidden">
@@ -145,16 +148,16 @@ export function Projects() {
                   <CardTitle className="text-xl text-white">
                     {project.title}
                   </CardTitle>
-                  <Badge variant="secondary">{project.year}</Badge>
+                  <Badge variant="secondary" className="bg-orange-600 text-white">{project.year}</Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-slate-400 leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
-                    <Badge key={i} variant="outline" className="text-xs">
+                    <Badge key={i} variant="outline" className="text-xs border-slate-600 text-slate-300">
                       {tech}
                     </Badge>
                   ))}
@@ -168,7 +171,7 @@ export function Projects() {
           <Button
             asChild
             size="lg"
-            className="gap-2 bg-white text-black hover:bg-slate-200"
+            className="gap-2 bg-orange-600 hover:bg-orange-700 text-white transition-all duration-300 transform hover:scale-105"
           >
             <a
               href="https://github.com/aetzaz63?tab=repositories"

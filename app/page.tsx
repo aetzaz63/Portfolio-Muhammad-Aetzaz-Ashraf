@@ -12,7 +12,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 to-black">
+    <main className="min-h-screen bg-black dark:bg-black">
       <Navigation />
       <Hero />
       <About />

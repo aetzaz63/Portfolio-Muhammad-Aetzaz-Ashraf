@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, FileText } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -9,10 +9,18 @@ export function Footer() {
         <div className="flex flex-col items-center space-y-4">
           <div className="flex space-x-6">
             <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-600 transition-colors"
+            >
+              <Instagram size={24} />
+            </a>
+            <a
               href="https://github.com/aetzaz63"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-orange-600 transition-colors"
             >
               <Github size={24} />
             </a>
@@ -20,13 +28,21 @@ export function Footer() {
               href="https://linkedin.com/in/muhammad-aetzaz-ashraf"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-orange-600 transition-colors"
             >
               <Linkedin size={24} />
             </a>
             <a
+              href="https://medium.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-600 transition-colors"
+            >
+              <FileText size={24} />
+            </a>
+            <a
               href="mailto:aetzaz36@gmail.com"
-              className="hover:text-white transition-colors"
+              className="hover:text-orange-600 transition-colors"
             >
               <Mail size={24} />
             </a>
