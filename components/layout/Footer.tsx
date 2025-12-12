@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Instagram, FileText } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-black dark:bg-black text-slate-400 py-12">
+    <footer className="bg-black text-slate-500 py-12 border-t border-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-4">
           <div className="flex space-x-6">
@@ -12,42 +12,42 @@ export function Footer() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition-colors"
+              className="text-slate-500 hover:text-blue-400 transition-colors"
             >
-              <Instagram size={24} />
+              <Instagram size={20} />
             </a>
             <a
               href="https://github.com/aetzaz63"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition-colors"
+              className="text-slate-500 hover:text-blue-400 transition-colors"
             >
-              <Github size={24} />
+              <Github size={20} />
             </a>
             <a
               href="https://linkedin.com/in/muhammad-aetzaz-ashraf"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition-colors"
+              className="text-slate-500 hover:text-blue-400 transition-colors"
             >
-              <Linkedin size={24} />
+              <Linkedin size={20} />
             </a>
             <a
               href="https://medium.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 transition-colors"
+              className="text-slate-500 hover:text-blue-400 transition-colors"
             >
-              <FileText size={24} />
+              <FileText size={20} />
             </a>
             <a
               href="mailto:aetzaz36@gmail.com"
-              className="hover:text-orange-600 transition-colors"
+              className="text-slate-500 hover:text-blue-400 transition-colors"
             >
-              <Mail size={24} />
+              <Mail size={20} />
             </a>
           </div>
-          <p className="text-sm text-slate-500">
+          <p className="text-xs text-slate-600">
             &copy; {new Date().getFullYear()} Muhammad Aetzaz Ashraf. All rights reserved.
           </p>
         </div>

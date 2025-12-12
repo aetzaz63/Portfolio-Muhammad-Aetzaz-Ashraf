@@ -44,13 +44,13 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-black dark:bg-slate-950">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
             Technical Skills
           </h2>
-          <div className="w-20 h-1 bg-orange-600 mx-auto"></div>
+          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -59,12 +59,12 @@ export function Skills() {
             return (
               <Card
                 key={index}
-                className="hover:shadow-xl transition-all hover:-translate-y-1 duration-300 border border-slate-700 bg-slate-900 dark:bg-slate-900 hover:border-orange-600"
+                className="hover:shadow-xl transition-all hover:-translate-y-1 duration-300 border border-slate-800 bg-slate-900/40 hover:border-blue-600/50"
               >
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-white">
-                    <div className="p-2 bg-orange-600 rounded-lg">
-                      <Icon className="text-white" size={24} />
+                  <CardTitle className="flex items-center gap-3 text-white text-base">
+                    <div className="p-2 bg-blue-600/20 rounded-lg">
+                      <Icon className="text-blue-400" size={20} />
                     </div>
                     {category.title}
                   </CardTitle>
@@ -75,7 +75,7 @@ export function Skills() {
                       <Badge
                         key={i}
                         variant="secondary"
-                        className="text-sm px-3 py-1 bg-slate-800 text-slate-300 hover:bg-orange-600 hover:text-white transition-colors"
+                        className="text-xs px-2 py-1 bg-slate-800/50 text-slate-400 hover:bg-blue-600/30 hover:text-blue-300 transition-colors"
                       >
                         {skill}
                       </Badge>
